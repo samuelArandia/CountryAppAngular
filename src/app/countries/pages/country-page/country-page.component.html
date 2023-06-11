@@ -1,1 +1,57 @@
-<p>country-page works!</p>
+<ng-template #loading>
+  <div class="alert alert-info text-center">
+    Espere por favor
+  </div>
+</ng-template>
+
+<div *ngIf="country; else loading ">
+  <div class="row">
+    <div class="col">
+      <h2>País: <strong>{{ country.name.common }}</strong></h2>
+    </div>
+    <hr>
+    <div class="row m-5">
+      <div class="col">
+        <h3>Bandera</h3>
+        <img
+          [src]="country.flags.png"
+          [alt]="country.name.common"
+          class="img-fluid">
+      </div>
+      <div class="col">
+        <h3>Detalles</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Población: </strong> {{ country.population | number }}
+          </li>
+          <li class="list-group-item">
+            <strong>Capital: </strong> {{ country.capital }}
+          </li>
+          <li class="list-group-item">
+            <strong>Código: </strong> {{ country.cca3 }}
+          </li>
+          <li class="list-group-item">
+            <strong>Mapa: </strong>
+            <a href="{{ country.maps.googleMaps }}" target="_blank">Google Maps</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-2">
+      <div class="col">
+        <h3>Traducciones</h3>
+        <div class="d-flex flex-wrap">
+          <span class="badge bg-primary m-1">{{ country.translations['ara'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['per'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['por'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['kor'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['ita'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['fin'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['deu'].common }}</span>
+          <span class="badge bg-primary m-1">{{ country.translations['bre'].common }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
