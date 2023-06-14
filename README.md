@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
+![image](https://github.com/samuelArandia/CountryAppAngular/assets/83564327/f7ed239f-a8cd-4853-a3d7-d90313d2038f)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
