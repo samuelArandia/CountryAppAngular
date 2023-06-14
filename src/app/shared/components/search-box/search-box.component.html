@@ -1,3 +1,4 @@
+<!-- (keyup.enter)="emitValue(txtSearchInput.value)" -->
 
 <input
   type="text"
@@ -6,5 +7,6 @@
   class="form-control"
   [placeholder]="placeholder"
   #txtSearchInput
-  (keyup.enter)="emitValue(txtSearchInput.value)"
+  (keyup)="onKeyPress(txtSearchInput.value)"
+  [value]="initialValue"
 >
